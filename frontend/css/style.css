@@ -1,0 +1,111 @@
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #f4f6f9;
+  color: #1e293b;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 950px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+input,
+select,
+textarea,
+button {
+  width: 100%;
+  padding: 14px 16px;
+  margin-top: 8px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  font-size: 15px;
+  background-color: #f8fafc;
+  color: #0f172a;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #0ea5e9;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.1);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+button {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.25);
+  transform: translateY(-1px);
+}
+
+.card {
+  border: 1px solid #e2e8f0;
+  padding: 24px;
+  margin: 20px 0;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.verde {
+  background: #ecfdf5;
+  color: #065f46;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+  border: 1px solid #a7f3d0;
+}
+
+.amarelo {
+  background: #fffbeb;
+  color: #92400e;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+  border: 1px solid #fde68a;
+}
+
+.vermelho {
+  background: #fef2f2;
+  color: #991b1b;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+  border: 1px solid #fecaca;
+}
