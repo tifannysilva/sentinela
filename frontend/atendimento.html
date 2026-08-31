@@ -2,11 +2,186 @@
 <html>
 <head><link rel="stylesheet" href="style.css"></head>
 <body>
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f5f9;
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: #1e293b;
+}
+
+/* FORMULÁRIO */
+
+.container {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 35px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* TÍTULO */
+
+.container h2 {
+    color: #0f766e;
+    font-size: 28px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+/* ORGANIZAÇÃO DOS INPUTS */
+
+.container input,
+.container select {
+    height: 45px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 0 14px;
+    font-size: 14px;
+    color: #334155;
+    background: #ffffff;
+    outline: none;
+    transition: 0.2s ease;
+    margin-bottom: 18px;
+}
+
+/* DUAS COLUNAS */
+
+#nome,
+#cpf,
+#datadenascimento,
+#sexo,
+#nomedamae,
+#estadocivil,
+#telefone,
+#email,
+#tipo {
+    width: calc(50% - 10px);
+}
+
+/* CAMPOS DE LARGURA TOTAL */
+
+#endereco,
+#contatodeemergencia {
+    width: 100%;
+}
+
+/* FOTO */
+
+#foto {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background: #f8fafc;
+    cursor: pointer;
+}
+
+/* EFEITO AO CLICAR */
+
+.container input:focus,
+.container select:focus {
+    border-color: #0d9488;
+    box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.12);
+}
+
+/* HOVER */
+
+.container input:hover,
+.container select:hover {
+    border-color: #94a3b8;
+}
+
+/* PLACEHOLDER */
+
+.container input::placeholder {
+    color: #94a3b8;
+}
+
+/* SELECT */
+
+.container select {
+    cursor: pointer;
+}
+
+/* BOTÃO */
+
+.container button {
+    width: 100%;
+    height: 48px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #0f766e;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.container button:hover {
+    background: #115e59;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(15, 118, 110, 0.25);
+}
+
+.container button:active {
+    transform: translateY(0);
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 25px 20px;
+        border-radius: 12px;
+    }
+
+    .container h2 {
+        font-size: 23px;
+    }
+
+    #nome,
+    #cpf,
+    #datadenascimento,
+    #sexo,
+    #nomedamae,
+    #estadocivil,
+    #telefone,
+    #email,
+    #tipo {
+        width: 100%;
+    }
+}
+  </style>
 <div class="container">
 <h2>Atendimento</h2>
 
 <input id="nome" placeholder="Nome">
 <input id="cpf" placeholder="CPF">
+<input id="datadenascimento" placeholder="Data de nascimento">
+<input id="sexo" placeholder="Sexo">
+<input id="nomedamae" placeholder="Nome da mae">
+<input id="estadocivil" placeholder="estado civil">
+<input id="endereco" placeholder="Endereço">
+<input id="telefone" placeholder="Telefone">
+<input id="email" placeholder="E-mail">
+<input id="contatodeemergencia" placeholder="Contato de emergencia">
 
 <select id="tipo">
   <option>Convenio</option>
@@ -26,7 +201,16 @@ function cadastrar(){
   body: JSON.stringify({
     nome: nome.value,
     cpf: cpf.value,
+    datadenascimento: datadenascimento.value,
+    sexo: sexo.value,
+    nomedamae: nomedamae.value,
+    estadocivil: estadocivil.value,
+    endereco: endereco.value,
+    telefone: telefone.value,
+    email: email.value,
+    contatodeemergencia: contatodeemergencia.value,
     tipo: tipo.value
+    
   })
  });
  alert("Paciente enviado para triagem");
